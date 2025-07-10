@@ -6,12 +6,13 @@ namespace LearningWithNamDotNet.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IRepository repository;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IRepository repository, ILogger<HomeController> logger)
         {
+            this.repository = repository;
             _logger = logger;
-            logger.LogInformation("HomeController initialized.");
         }
 
         public IActionResult Index()
@@ -26,6 +27,9 @@ namespace LearningWithNamDotNet.Controllers
         public IActionResult NewAction(string name)
         {
             return Content("This is a new action in the HomeController." + " Name: " + name);
+        }
+        public IActionResult NewMyAction(string id) { 
+            return Content("This is a new my action in the HomeController. " + repository.GetByID(id));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
