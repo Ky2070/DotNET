@@ -1,4 +1,4 @@
-﻿namespace LearningWithNamDotNet
+﻿namespace TodoList
 {
     public interface IRepository
     {

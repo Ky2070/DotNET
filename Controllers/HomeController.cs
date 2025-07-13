@@ -1,8 +1,9 @@
 ﻿using System.Diagnostics;
-using LearningWithNamDotNet.Models;
+using TodoList.Models;
 using Microsoft.AspNetCore.Mvc;
+using TodoList;
 
-namespace LearningWithNamDotNet.Controllers
+namespace TodoList.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace LearningWithNamDotNet.Controllers
+namespace TodoList.Controllers
 {
     public class MathController : Controller
     {

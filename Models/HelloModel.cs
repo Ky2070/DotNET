@@ -1,4 +1,4 @@
-﻿namespace LearningWithNamDotNet.Models
+﻿namespace TodoList.Models
 {
     public class HelloModel
     {

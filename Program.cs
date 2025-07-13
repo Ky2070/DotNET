@@ -1,4 +1,4 @@
-using LearningWithNamDotNet;
+using TodoList;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,5 +27,11 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+//app.MapControllerRoute(
+//    name: "product-detail",
+//    pattern: "p/{id}",
+//    defaults: new { controller = "Product", action = "Details" }
+//    );
 
 app.Run();
